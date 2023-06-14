@@ -1,0 +1,45 @@
+use strict;
+use warnings FATAL => 'all';
+
+use Getopt::Long;
+use Pod::Usage;
+use Term::ANSIColor;
+use File::Basename;
+use File::Spec;
+use Cwd;
+use Cwd 'abs_path';
+use File::Temp;
+use File::Path;
+use File::Find;
+use File::Path 'rmtree';
+use File::Copy;
+use File::stat;
+use POSIX qw(strftime);
+use Cwd;
+use Cwd 'abs_path';
+use File::Basename;
+use File::Spec;
+
+my $debug = 0;
+my $verbose = 0;
+my $help = 0;
+my $quiet = 0;
+my $safe = 0;
+
+GetOptions(
+    'debug'   => \$debug,
+    'verbose' => => \$verbose,
+    'help'    => $help,
+    'quiet'   => $quiet,
+    'safe'    => $safe,
+
+) or pod2usage($debug, $verbose, $help, $quiet, $safe);
+
+pod2usage($debug, $verbose, $help, $quiet, $safe);
+
+
+1;
+__END__
+
+
+
